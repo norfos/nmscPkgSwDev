@@ -1,0 +1,3426 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NanumSquareRound';
+  font-weight: 400;
+  src: url(../Font/NanumSquareRoundR.eot);
+  src: local(NanumSquareRoundR), url(../Font/NanumSquareRoundR.ttf) format("truetype"), url(../Font/NanumSquareRoundOTFR.otf) format("opentype");
+  unicode-range: U+AC00-D7A3;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  src: url(../Font/Montserrat-Light.eot);
+  src: local(Montserrat-Light), url(../Font/Montserrat-Light.ttf) format("truetype"), url(../Font/Montserrat-Light.otf) format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  src: url(../Font/Montserrat-Medium.eot);
+  src: local(Montserrat-Medium), url(../Font/Montserrat-Medium.ttf) format("truetype"), url(../Font/Montserrat-Medium.otf) format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  src: url(../Font/Montserrat-Regular.eot);
+  src: local(Montserrat-Regular), url(../Font/Montserrat-Regular.otf) format("truetype"), url(../Font/Montserrat-Regular.otf) format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  src: url(../Font/Montserrat-SemiBold.eot);
+  src: local(Montserrat-SemiBold), url(../Font/Montserrat-SemiBold.ttf) format("truetype"), url(../Font/Montserrat-SemiBold.otf) format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  src: url(../Font/Montserrat-Bold.eot);
+  src: local(Montserrat-Bold), url(../Font/Montserrat-Bold.ttf) format("truetype"), url(../Font/Montserrat-Bold.otf) format("opentype");
+  font-style: normal;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  text-decoration: none;
+  letter-spacing: -0.3px;
+  font-size: 10px;
+  font-family: 'Montserrat','NanumSquareRound', sans-serif;
+  color: #2d2d2d;
+  overflow-x: auto;
+}
+
+body {
+  height: 100%;
+  line-height: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+div, span, label, a, input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+button, select {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Montserrat','NanumSquareRound', sans-serif;
+  padding: 0px;
+}
+
+button:focus, select:focus {
+  outline-color: #0071eb;
+}
+
+input {
+  cursor: pointer;
+  font-family: 'Montserrat','NanumSquareRound', sans-serif;
+}
+
+input[type="text"], input[type="date"] {
+  width: 100%;
+  height: 4.4rem;
+  border: 1px solid #dbdbdb;
+  background-color: white;
+  border-radius: 0.4rem;
+  padding: 0px 16px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline-color: #0071eb;
+}
+
+img {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: crisp-edges;
+  vertical-align: middle;
+  width: auto;
+  max-width: 100%;
+}
+
+select {
+  width: 27.2rem;
+  height: 4.4rem;
+  border: 1px solid #dbdbdb;
+  padding: 0px 16px;
+  background: url(../Images/common/Select.png) white no-repeat;
+  background-position: right 16px bottom 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select option {
+  cursor: pointer;
+  padding: 4px;
+}
+
+select.SortingView {
+  width: 10rem;
+  height: 4rem;
+  background-position: 90% 50%;
+  padding: 0px 16px;
+}
+
+object {
+  width: 100%;
+  height: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+table thead {
+  height: 6rem;
+}
+
+table thead tr {
+  background-color: #f4f8fc;
+}
+
+table thead tr th {
+  font-size: 15px;
+  font-weight: 500;
+  vertical-align: middle;
+  padding: 0px 16px;
+}
+
+table tbody tr {
+  height: 6rem;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+table tbody tr.NoData th {
+  font-size: 15px;
+  color: #dbdbdb;
+  vertical-align: middle;
+  padding: 0px 16px;
+}
+
+table tbody tr td {
+  vertical-align: middle;
+  padding: 0px 16px;
+  text-align: center;
+  color: #707070;
+}
+
+table tbody tr td svg {
+  margin-right: 8px;
+}
+
+table.ColTable tr th {
+  vertical-align: middle;
+  padding: 0px 16px;
+  background-color: #f4f8fc;
+  font-weight: 400;
+}
+
+table.ColTable tr td {
+  vertical-align: middle;
+  padding: 20px 16px;
+  color: #707070;
+  text-align: left;
+}
+
+table.ColTable tr td span {
+  display: block;
+}
+
+table.ColTable tr td a {
+  display: inline-block;
+}
+
+table.ColTable tr td a::after {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.5' height='17.5'%3E%3Cg fill='%232d2d2d'%3E%3Cpath d='M12.017 17.5H1.716A1.735 1.735 0 0 1 0 15.75V5.25A1.735 1.735 0 0 1 1.716 3.5h.4v9.019a1.735 1.735 0 0 0 1.716 1.749h9.9v1.482a1.735 1.735 0 0 1-1.715 1.75Z'/%3E%3Cpath d='M14.291 14.676H4.034a2.212 2.212 0 0 1-2.21-2.209V2.21A2.212 2.212 0 0 1 4.034 0h10.257A2.212 2.212 0 0 1 16.5 2.21v10.257a2.212 2.212 0 0 1-2.209 2.209ZM4.034 1a1.211 1.211 0 0 0-1.21 1.21v10.257a1.211 1.211 0 0 0 1.21 1.21h10.257a1.211 1.211 0 0 0 1.21-1.21V2.21A1.211 1.211 0 0 0 14.291 1Z'/%3E%3Cpath d='M12.621 8.55a.5.5 0 0 1-.5-.5V4.282H8.402a.5.5 0 0 1 0-1h4.219a.5.5 0 0 1 .5.5v4.266a.5.5 0 0 1-.5.502Z'/%3E%3Cpath d='M5.881 10.824a.5.5 0 0 1-.349-.858l6.764-6.593a.5.5 0 1 1 .7.716l-6.764 6.593a.5.5 0 0 1-.351.142Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  margin-left: 4px;
+  vertical-align: bottom;
+}
+
+table.ColTable tr td:nth-of-type(2), table.ColTable tr td.BorderL {
+  border-left: 1px solid #dbdbdb;
+}
+
+table.ColTable tr:first-of-type {
+  border-top: 1px solid #dbdbdb;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+input[type=date]::-webkit-datetime-edit-text {
+  -webkit-appearance: none;
+  display: none;
+}
+
+input[type=date]::-webkit-datetime-edit-month-field {
+  -webkit-appearance: none;
+  display: none;
+}
+
+input[type=date]::-webkit-datetime-edit-day-field {
+  -webkit-appearance: none;
+  display: none;
+}
+
+input[type=date]::-webkit-datetime-edit-year-field {
+  -webkit-appearance: none;
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(187, 187, 187, 0.5);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.easyzoom {
+  position: relative;
+}
+
+.easyzoom .magnifier {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  cursor: move;
+}
+
+.easyzoom .small, .easyzoom.big {
+  position: absolute;
+  border: 1px solid #aaa;
+}
+
+.easyzoom .small {
+  top: 0;
+  left: 0;
+  cursor: move;
+}
+
+.easyzoom .small img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.easyzoom .big {
+  overflow: hidden;
+  display: none;
+}
+
+.easyzoom .big img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.HeaderWrap {
+  width: 100%;
+  height: 12rem;
+  position: fixed;
+  top: 0px;
+  -webkit-box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.04);
+  background-color: white;
+  z-index: 5;
+}
+
+.HeaderWrap .TopHeader {
+  width: 100%;
+  height: 4rem;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.HeaderWrap .TopHeader ul {
+  display: none;
+  min-width: 1200px;
+  max-width: 1320px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.HeaderWrap .TopHeader ul li {
+  display: inline-block;
+}
+
+.HeaderWrap .TopHeader ul li a {
+  display: inline-block;
+  width: auto;
+  line-height: 40px;
+  font-weight: 400;
+  color: #919191;
+  font-size: 1.4rem;
+}
+
+.HeaderWrap .TopHeader ul li a img {
+  width: 2.3rem;
+  margin-right: 0.8rem;
+}
+
+.HeaderWrap .TopHeader ul li.MyPage {
+  margin-right: 2.8rem;
+}
+
+.HeaderWrap .TopHeader ul li.MyPage a {
+  color: #2d2d2d;
+  text-decoration: underline;
+}
+
+.HeaderWrap .TopHeader ul li.MyPage a:hover {
+  text-decoration: underline;
+}
+
+.HeaderWrap .TopHeader ul.active {
+  display: block;
+}
+
+.HeaderWrap .MenuHeader {
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: white;
+}
+
+.HeaderWrap .MenuHeader .Menu {
+  width: 132rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.HeaderWrap .MenuHeader .Menu .Logo {
+  display: inline-block;
+  line-height: 8rem;
+}
+
+.HeaderWrap .MenuHeader .Menu .gnb {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.HeaderWrap .MenuHeader .Menu .gnb .MainMenu .menu {
+  float: left;
+  padding: 0px 2.4rem;
+  text-align: center;
+}
+
+.HeaderWrap .MenuHeader .Menu .gnb .MainMenu .menu .depth1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.HeaderWrap .MenuHeader .Menu .gnb .MainMenu .menu .depth1 a {
+  display: inline-block;
+  height: 2rem;
+  color: #707070;
+}
+
+.HeaderWrap .MenuHeader .Menu .gnb .MainMenu .menu .depth2 {
+  height: 0px;
+  overflow: hidden;
+}
+
+.HeaderWrap .MenuHeader .Menu .gnb .MainMenu .menu .depth2 ul {
+  overflow: hidden;
+}
+
+.HeaderWrap .MenuHeader .Menu .gnb .MainMenu .menu .depth2 ul li {
+  width: 100%;
+  clear: both;
+  display: block;
+  padding: 1rem 0px;
+}
+
+.HeaderWrap .MenuHeader .Menu .gnb .MainMenu .menu .depth2 ul li a {
+  line-height: 2rem;
+  color: #2d2d2d;
+}
+
+.HeaderWrap .MenuHeader .Menu .gnb .MainMenu .menu:hover .depth1 a {
+  color: #0071eb;
+  font-weight: bold;
+  border-bottom: 2px solid #0071eb;
+}
+
+.HeaderWrap .MenuHeader .Menu .gnb .MainMenu .menu:nth-of-type(2) {
+  width: 139px;
+}
+
+.LoginWrap {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: calc(100vh - 120px - 180px);
+  background: url(../Images/login/LoginBG.svg) no-repeat 95% bottom #fafafa;
+  margin-top: 12rem;
+  overflow-y: auto;
+}
+
+.LoginWrap.SignPop {
+  min-height: 32rem;
+  background: transparent;
+  margin-top: 0px;
+}
+
+.LoginWrap.SignPop .LoginBox {
+  width: 99%;
+}
+
+.LoginWrap.SignPop #signUpForm, .LoginWrap.SignPop #pwChange {
+  padding-bottom: 0px;
+}
+
+.LoginWrap.SignPop #signUpForm .Field.Sign, .LoginWrap.SignPop #pwChange .Field.Sign {
+  margin-bottom: 0px;
+}
+
+.LoginWrap .LoginBox {
+  width: 36rem;
+  text-align: center;
+}
+
+.LoginWrap .LoginBox .Title {
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: #0071eb;
+  margin-bottom: 5.6rem;
+}
+
+.LoginWrap .LoginBox form {
+  width: 100%;
+}
+
+.LoginWrap .LoginBox form .Field {
+  margin-bottom: 3.2rem;
+}
+
+.LoginWrap .LoginBox form .Field label {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0px 0.4rem;
+  text-align: left;
+  margin-bottom: 0.8rem;
+}
+
+.LoginWrap .LoginBox form .Field input {
+  width: 100%;
+  height: 5rem;
+  border: 1px solid #dbdbdb;
+  background-color: white;
+  border-radius: 0.4rem;
+  padding-left: 4.4rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+  background-repeat: no-repeat;
+  background-position: 1.3rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.LoginWrap .LoginBox form .Field input::-webkit-input-placeholder {
+  color: #dbdbdb;
+  font-size: 1.5rem;
+}
+
+.LoginWrap .LoginBox form .Field input:-ms-input-placeholder {
+  color: #dbdbdb;
+  font-size: 1.5rem;
+}
+
+.LoginWrap .LoginBox form .Field input::-ms-input-placeholder {
+  color: #dbdbdb;
+  font-size: 1.5rem;
+}
+
+.LoginWrap .LoginBox form .Field input::placeholder {
+  color: #dbdbdb;
+  font-size: 1.5rem;
+}
+
+.LoginWrap .LoginBox form .Field input::-webkit-input-placeholder {
+  color: #dbdbdb;
+  font-size: 1.5rem;
+}
+
+.LoginWrap .LoginBox form .Field input:-ms-input-placeholder {
+  color: #dbdbdb;
+  font-size: 1.5rem;
+}
+
+.LoginWrap .LoginBox form .Field input:-mos-input-placeholder {
+  color: #dbdbdb;
+  font-size: 1.5rem;
+}
+
+.LoginWrap .LoginBox form .Field input:focus {
+  outline: 1px solid #0071eb;
+}
+
+.LoginWrap .LoginBox form .Field input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.LoginWrap .LoginBox form .Field input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.LoginWrap .LoginBox form .Field input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.LoginWrap .LoginBox form .Field input:focus::placeholder {
+  opacity: 0;
+}
+
+.LoginWrap .LoginBox form .Field input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.LoginWrap .LoginBox form .Field input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.LoginWrap .LoginBox form .Field input:focus:-mos-input-placeholder {
+  opacity: 0;
+}
+
+.LoginWrap .LoginBox form .Field input.id {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg transform='translate(-2621 615)'%3E%3Crect width='24' height='24' fill='none' data-name='사각형 394' transform='translate(2621 -615)'/%3E%3Cg fill='%23dbdbdb' data-name='Icon feather-user'%3E%3Cpath d='M2640.5-594a.5.5 0 0 1-.5-.5v-3.813a3.193 3.193 0 0 0-3.25-3.126h-7.5a3.294 3.294 0 0 0-2.3.921 3.047 3.047 0 0 0-.946 2.2v3.813a.5.5 0 0 1-1 0v-3.808a4.039 4.039 0 0 1 1.247-2.926 4.289 4.289 0 0 1 3-1.2h7.5a4.194 4.194 0 0 1 4.25 4.126v3.813a.5.5 0 0 1-.501.5Z' data-name='패스 1676'/%3E%3Cpath d='M2633-612a4 4 0 1 1-4 4 4 4 0 0 1 4-4Zm0 7a3 3 0 1 0-3-3 3 3 0 0 0 3 3Z' data-name='패스 1677'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.LoginWrap .LoginBox form .Field input.id:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cg transform='translate(-2621 615)'%3E%3Crect width='24' height='24' fill='none' data-name='사각형 394' transform='translate(2621 -615)'/%3E%3Cg fill='%230071eb' data-name='Icon feather-user'%3E%3Cpath d='M2640.5-594a.5.5 0 0 1-.5-.5v-3.813a3.193 3.193 0 0 0-3.25-3.126h-7.5a3.294 3.294 0 0 0-2.3.921 3.047 3.047 0 0 0-.946 2.2v3.813a.5.5 0 0 1-1 0v-3.808a4.039 4.039 0 0 1 1.247-2.926 4.289 4.289 0 0 1 3-1.2h7.5a4.194 4.194 0 0 1 4.25 4.126v3.813a.5.5 0 0 1-.501.5Z' data-name='패스 1676'/%3E%3Cpath d='M2633-612a4 4 0 1 1-4 4 4 4 0 0 1 4-4Zm0 7a3 3 0 1 0-3-3 3 3 0 0 0 3 3Z' data-name='패스 1677'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.LoginWrap .LoginBox form .Field input.password {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cg transform='translate(-794 -453)'%3E%3Cg transform='translate(801 456)' fill='%23fff' stroke='%23dbdbdb'%3E%3Ccircle cx='5' cy='5' r='5' stroke='none'/%3E%3Ccircle cx='5' cy='5' r='4.5' fill='none'/%3E%3C/g%3E%3Cg transform='translate(798 461)' fill='%23fff' stroke='%23dbdbdb'%3E%3Crect width='16' height='14' rx='2' stroke='none'/%3E%3Crect x='.5' y='.5' width='15' height='13' rx='1.5' fill='none'/%3E%3C/g%3E%3Ccircle cx='2' cy='2' r='2' transform='translate(804 464)' fill='%23dbdbdb'/%3E%3Crect width='2' height='6' rx='1' transform='translate(805 466)' fill='%23dbdbdb'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.LoginWrap .LoginBox form .Field input.password:focus {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cg transform='translate(-794 -453)'%3E%3Cg transform='translate(801 456)' fill='%23fff' stroke='%230071eb'%3E%3Ccircle cx='5' cy='5' r='5' stroke='none'/%3E%3Ccircle cx='5' cy='5' r='4.5' fill='none'/%3E%3C/g%3E%3Cg transform='translate(798 461)' fill='%23fff' stroke='%230071eb'%3E%3Crect width='16' height='14' rx='2' stroke='none'/%3E%3Crect x='.5' y='.5' width='15' height='13' rx='1.5' fill='none'/%3E%3C/g%3E%3Ccircle cx='2' cy='2' r='2' transform='translate(804 464)' fill='%230071eb'/%3E%3Crect width='2' height='6' rx='1' transform='translate(805 466)' fill='%230071eb'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.LoginWrap .LoginBox form .Field.Sign input {
+  padding: 0px 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.LoginWrap .LoginBox form .Field.Sign input:focus {
+  outline-color: white;
+}
+
+.LoginWrap .LoginBox form .Field.Sign label span {
+  color: #d30404;
+}
+
+.LoginWrap .LoginBox form .Field.Sign p {
+  text-align: left;
+  font-size: 1.2rem;
+  color: #919191;
+  margin-bottom: 1.6rem;
+}
+
+.LoginWrap .LoginBox form .LoginBtn {
+  width: 100%;
+  height: 5.2rem;
+  background: #0071eb;
+  border-radius: 0.4rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.LoginWrap .LoginBox form .SignBtn {
+  width: 100%;
+  height: 5.8rem;
+  padding: 2rem 0px;
+}
+
+.LoginWrap .LoginBox form .SignBtn a {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #919191;
+}
+
+.LoginWrap .LoginBox form .SNSLogin {
+  padding: 2.4rem 0px;
+}
+
+.LoginWrap .LoginBox form .SNSLogin p {
+  color: #919191;
+}
+
+.LoginWrap .LoginBox form .SNSLogin .SNSBox {
+  width: 16.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.MainWrap {
+  min-width: 132rem;
+  width: 100%;
+  height: 500px;
+  margin-top: 12rem;
+  background: url(../Images/main/bg_gr_01.png) no-repeat center center;
+  background-size: 132rem;
+}
+
+.MainWrap .NoticeLabel {
+  width: 100%;
+  height: 60px;
+  backdrop-filter: blur(7px) brightness(70%);
+  -webkit-backdrop-filter: blur(7px) brightness(70%);
+  color: white;
+  overflow: hidden;
+}
+
+.MainWrap .NoticeLabel .NoticeZone {
+  width: 132rem;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.MainWrap .NoticeLabel .NoticeZone .Left {
+  width: 100px;
+}
+
+.MainWrap .NoticeLabel .NoticeZone .Left p {
+  font-size: 20px;
+}
+
+.MainWrap .NoticeLabel .NoticeZone .Right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 122rem;
+  height: 60px;
+  padding: 6px 32px;
+}
+
+.MainWrap .NoticeLabel .NoticeZone .Right ul {
+  width: 1018px;
+}
+
+.MainWrap .NoticeLabel .NoticeZone .Right ul li {
+  line-height: 48px;
+  padding-right: 32px;
+}
+
+.MainWrap .NoticeLabel .NoticeZone .Right ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+
+.MainWrap .NoticeLabel .NoticeZone .Right .navi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.MainWrap .Main {
+  width: 132rem;
+  height: calc(100% - -20px);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.MainWrap .Main .Box {
+  width: 32%;
+  height: 360px;
+  backdrop-filter: blur(30px) brightness(110%);
+  -webkit-backdrop-filter: blur(30px) brightness(110%);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.MainWrap .Main .Box p {
+  font-size: 2.2rem;
+  margin-bottom: 2.2rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.MainWrap .Main .Box div {
+  width: 100%;
+  height: 27rem;
+  border-radius: 8px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  position: relative;
+}
+
+.MainWrap .Main .Box div .HoverZone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.5;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  -webkit-box-shadow: 0px -0.3rem 0.6rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0px -0.3rem 0.6rem rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+.MainWrap .Main .Box div:hover .HoverZone {
+  z-index: 1;
+}
+
+.MainWrap .Main .Box div.Spectrum {
+  background: url(../Images/main/main03.png) no-repeat center center;
+  background-size: cover;
+}
+
+.MainWrap .Main .Box div.Flux {
+  background: url(../Images/main/main04.png) no-repeat center center;
+  background-size: cover;
+}
+
+.MainWrap .Main .Box div.Weather {
+  background: url(../Images/main/Spectrum.png) no-repeat center center;
+  background-size: cover;
+}
+
+.MainWrap .Main .Box:nth-of-type(2) {
+  margin: 0 2%;
+}
+
+.MainSubZone {
+  width: 132rem;
+  height: 360px;
+  margin: 0 auto;
+  padding: 100px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.MainSubZone .WeatherZone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 160px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.MainSubZone .WeatherZone .WtTitle .WtInfo {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.MainSubZone .WeatherZone .WtTitle .Spot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  font-size: 15px;
+  font-weight: 700;
+  background: url(../Images/main/naju.svg) no-repeat left center;
+  padding-left: 75px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.MainSubZone .WeatherZone .WtTitle .Spot span {
+  display: block;
+  font-weight: 400;
+}
+
+.MainSubZone .WeatherZone .WtTitle .Spot .Clock {
+  font-size: 18px;
+}
+
+.MainSubZone .WeatherZone .WeatherBox {
+  width: 1092px;
+  -webkit-box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.04);
+  border: 1px solid #EAEDF4;
+  border-radius: 8px;
+}
+
+.MainSubZone .WeatherZone .WeatherBox ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 16px 24px;
+}
+
+.MainSubZone .WeatherZone .WeatherBox ul li {
+  width: 20%;
+  height: 126px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0px 24px;
+  font-size: 14px;
+}
+
+.MainSubZone .WeatherZone .WeatherBox ul li > p.Data {
+  line-height: 39px;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.MainSubZone .WeatherZone .WeatherBox ul li > p.Data span {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 700;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.MainSubZone input[type="button"] {
+  display: none;
+}
+
+.MainSubZone .SkyCamera {
+  position: absolute;
+  top: 75px;
+  right: 0px;
+  font-size: 16px;
+}
+
+.MainSubZone .SkyCamera svg {
+  margin-left: 4px;
+}
+
+.ManagerZone {
+  width: 100%;
+  height: 100%;
+}
+
+.ManagerZone .TabContainer {
+  width: 132rem;
+  margin: 0 auto;
+  padding: 100px 0px;
+  position: relative;
+}
+
+.ManagerZone .TabContainer .GoFindData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 224px;
+  height: 40px;
+  padding: 11px 24px;
+  border-radius: 100px;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+
+.ManagerZone .TabContainer .GoFindData svg {
+  margin-left: 8px;
+}
+
+.ManagerZone .TabContainer .Tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 132rem;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ManagerZone .TabContainer .Tabs li {
+  width: 252px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.ManagerZone .TabContainer .Tabs li .ChartTitle {
+  width: auto;
+  height: 5.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding: 12px 8px;
+  border-radius: 100px;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ManagerZone .TabContainer .Tabs li .ChartTitle span {
+  font-size: 12px;
+  padding-left: 4px;
+}
+
+.ManagerZone .TabContainer .Tabs li .minigraph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 198px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #EAEDF4;
+  padding: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ManagerZone .TabContainer .Tabs li .minigraph .ChartLabelWrap .ChartLabel {
+  font-size: 14px;
+}
+
+.ManagerZone .TabContainer .Tabs li .minigraph .ChartLabelWrap .ChartLabel span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #0071eb;
+  border-radius: 50px;
+}
+
+.ManagerZone .TabContainer .Tabs li.active .ChartTitle {
+  font-weight: bold;
+}
+
+.ManagerZone .TabContainer .Tabs li.active .minigraph {
+  border-color: #2d2d2d;
+  -webkit-box-shadow: 0.7rem 0.7rem 2rem rgba(0, 0, 0, 0.04);
+          box-shadow: 0.7rem 0.7rem 2rem rgba(0, 0, 0, 0.04);
+}
+
+.ManagerZone .TabContainer .Tabs li:first-of-type {
+  margin-left: 0px;
+}
+
+.ManagerZone .TabContainer .ContWrap {
+  border-radius: 0px 1.2rem 1.2rem;
+  margin-top: 16px;
+}
+
+.ManagerZone .TabContainer .ContWrap .TabContent {
+  display: none;
+  width: 100%;
+  max-height: 520px;
+  height: 100%;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #EAEDF4;
+  -webkit-box-shadow: 0.7rem 0.7rem 2rem rgba(0, 0, 0, 0.04);
+          box-shadow: 0.7rem 0.7rem 2rem rgba(0, 0, 0, 0.04);
+  padding: 26px 32px;
+}
+
+.ManagerZone .TabContainer .ContWrap .TabContent .ChartBtnWrap {
+  margin-bottom: 2rem;
+}
+
+.ManagerZone .TabContainer .ContWrap .TabContent .ChartBtnWrap button {
+  width: auto;
+  min-width: 4.8rem;
+  padding: 4px 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 100px;
+  color: #919191;
+  margin-right: 8px;
+}
+
+.ManagerZone .TabContainer .ContWrap .TabContent .ChartBtnWrap button.active {
+  color: #0071eb;
+  border-color: #0071eb;
+}
+
+.ManagerZone .TabContainer .ContWrap .TabContent .ChartBtnWrap button:last-of-type {
+  margin-right: 0px;
+}
+
+.ManagerZone .TabContainer .ContWrap .TabContent.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Wrap {
+  min-width: 132rem;
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 120px - 126px);
+  background-color: #fafcfe;
+  padding: 6rem 0 13.6rem 0;
+  margin-top: 12rem;
+}
+
+.Wrap .ContWrap {
+  width: 132rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 0px 6rem;
+  background-color: white;
+  -webkit-box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.04);
+  border-radius: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.Wrap .ContWrap .ContHwrap {
+  height: 8.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Wrap .ContWrap .ContHwrap h1 {
+  font-size: 3.2rem;
+}
+
+.Wrap .ContWrap .ContHwrap .Navigation {
+  display: inline-block;
+}
+
+.Wrap .ContWrap .ContHwrap .Navigation li {
+  float: left;
+}
+
+.Wrap .ContWrap .ContHwrap .Navigation li a {
+  display: inline-block;
+  color: #919191;
+}
+
+.Wrap .ContWrap .ContHwrap .Navigation li a svg {
+  vertical-align: middle;
+}
+
+.Wrap .ContWrap .ContHwrap .Navigation li:last-of-type a {
+  color: #2d2d2d;
+  cursor: default;
+  font-weight: 500;
+}
+
+.Wrap .ContWrap .ContHwrap .Navigation li:last-of-type::after {
+  content: none;
+}
+
+.Wrap .ContWrap .ContHwrap .Navigation li::after {
+  content: "";
+  display: inline-block;
+  width: 2.7rem;
+  height: 1.6rem;
+  background: url(../Images/common/NaviSlash.svg) no-repeat center center;
+  vertical-align: middle;
+}
+
+.Wrap .ContWrap .ContBwrap {
+  padding: 4.8rem 0px;
+  position: relative;
+}
+
+.Wrap .ContWrap .ContBwrap .SubTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .SvEdit {
+  position: absolute;
+  right: 0;
+  top: 4.8rem;
+  font-size: 1.5rem;
+  color: #2d2d2d;
+}
+
+.Wrap .ContWrap .ContBwrap .SvEdit svg {
+  vertical-align: inherit;
+}
+
+.Wrap .ContWrap .ContBwrap .Content {
+  padding-bottom: 4.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SearchWrap {
+  width: 100%;
+  max-height: 22rem;
+  background-color: #f4f8fc;
+  border: 1px solid #0071eb;
+  border-radius: 0.8rem;
+  padding: 3.2rem;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SearchWrap .SearchCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 2.4rem;
+  border-bottom: 1px dashed #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SearchWrap .SearchCont .MultiBox {
+  width: 27.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SearchWrap .SearchCont .MultiBox label {
+  display: block;
+  font-size: 1.5rem;
+  color: #707070;
+  margin-bottom: 0.8rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SearchWrap .SearchCont .MultiBox select, .Wrap .ContWrap .ContBwrap .Content .SearchWrap .SearchCont .MultiBox input {
+  border: 1px solid #E5F2FF;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SearchWrap .SearchCont .MultiBox input {
+  display: inline-block;
+  width: calc(50% - 9px);
+  height: 4.4rem;
+  border-radius: 4px;
+  padding: 0 1.8rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SearchWrap .SearchCont.SurveyBox {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0;
+  border-bottom: none;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SearchWrap .SearchCont.SurveyBox .MultiBox label span {
+  color: #d30404;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SearchWrap .SearchCont.SurveyBox .MultiBox input[type="text"] {
+  width: 27.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SearchWrap > button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-color: #0071eb;
+  background-color: white;
+  color: #0071eb;
+  margin-top: 2rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SearchWrap > button:hover {
+  background-color: #0071eb;
+  color: white;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SortingWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1.6rem;
+  gap: 2.8rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SortingWrap .Sorting {
+  font-size: 1.5rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SortingWrap .Sorting span {
+  margin-left: 1.2rem;
+  color: #032b5f;
+  font-weight: 600;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SortingWrap .SortDesc {
+  color: #d30404;
+  margin-left: auto;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SortingWrap .UserBtnWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  gap: 1.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .SortingWrap .UserBtnWrap .BlueBtn_Border {
+  border-color: #0071eb;
+  background-color: white;
+  color: #0071eb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .GraphWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .GraphWrap .GraphZone {
+  width: 57.8rem;
+  height: 38.9rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  padding: 2.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .GraphWrap .GraphZone > p {
+  height: 28px;
+  text-align: center;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .GraphWrap .GraphZone > p span {
+  font-size: 10px;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .GraphWrap .GraphZone div {
+  width: 100%;
+  height: calc(100% - 28px);
+  border: 1px solid #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .NoticeTitle {
+  width: 100%;
+  height: 8.2rem;
+  background-color: #f4f8fc;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .NoticeTitle > h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-right: auto;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .NoticeTitle > p {
+  margin-left: 3.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .NoticeTitle > p span {
+  color: #919191;
+  margin-left: 1.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .FileZone {
+  width: 100%;
+  height: auto;
+  padding: 2rem 3.2rem 1.2rem;
+  border-bottom: 1px solid #dbdbdb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .FileZone > p {
+  width: 6.1rem;
+  height: 2rem;
+  border-right: 1px solid #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .FileZone ul li {
+  padding: 0 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .FileZone ul li a {
+  font-size: 1.5rem;
+  color: #707070;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .FileZone > button {
+  height: 2.4rem;
+  padding: 0;
+  border: none;
+  color: #0071eb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .ContZone {
+  height: auto;
+  min-height: 37.6rem;
+  padding: 3.6rem 3.2rem;
+  font-weight: 500;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 7rem;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div {
+  width: 50%;
+  padding: 1.6rem 3.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div a {
+  display: inline-block;
+  position: relative;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div a p {
+  margin-bottom: 0.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div a span {
+  font-size: 1.5rem;
+  color: #707070;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div a.NonePost span {
+  color: #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div a.NonePost::before {
+  opacity: 0.3;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div a::before {
+  content: '';
+  width: 3.2rem;
+  height: 3.2rem;
+  display: block;
+  position: absolute;
+  top: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cg transform='translate(-1509 -945)'%3E%3Ccircle cx='16' cy='16' r='16' transform='translate(1509 945)' fill='%23e9ecf3'/%3E%3Cpath d='m1522.5 954 7 7.084-7 6.916' fill='none' stroke='%23707070' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div.Prev {
+  border-right: 1px solid #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div.Prev a {
+  padding-left: 6.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div.Prev a::before {
+  left: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div.Next {
+  text-align: right;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div.Next a {
+  padding-right: 6.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .PageMove div.Next a::before {
+  right: 0;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .Pagination {
+  margin-top: 4.8rem;
+  text-align: center;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .Pagination ul {
+  display: inline-block;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .Pagination ul li {
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  float: left;
+  text-align: center;
+  margin: 0px 0.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .Pagination ul li .Arrow svg {
+  fill: #e9ecf3;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .Pagination ul li .Arrow.disabled svg {
+  fill: #bababa;
+  cursor: not-allowed;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .Pagination ul li .Arrow.active svg {
+  fill: #6d6d6d;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .Pagination ul li.active {
+  background-color: #f4f8fc;
+  border-radius: 0.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content button {
+  width: auto;
+  height: 4rem;
+  border: 1px solid #2d2d2d;
+  border-radius: 0.4rem;
+  padding: 1rem 1.6rem;
+  margin-left: auto;
+  background-color: white;
+}
+
+.Wrap .ContWrap .ContBwrap .Content button svg {
+  margin-left: 0.8rem;
+  margin-top: -0.3rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content button.AddBoard {
+  border-color: #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content button.BlueBtn {
+  background-color: #0071eb;
+  color: white;
+  border: none;
+}
+
+.Wrap .ContWrap .ContBwrap .Content button.NoBorder {
+  border: none;
+}
+
+.Wrap .ContWrap .ContBwrap .Content button.SurveySearch {
+  margin: 0;
+  border-color: #0071eb;
+  color: #0071eb;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.Wrap .ContWrap .ContBwrap .Content button.SurveySearch:hover {
+  background-color: #0071eb;
+  color: white;
+}
+
+.Wrap .ContWrap .ContBwrap .Content table td button {
+  border: none;
+  padding: 0px;
+}
+
+.Wrap .ContWrap .ContBwrap .Content table td.off svg {
+  fill: #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .StatusChartWrap {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm {
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  margin-bottom: 2.4rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox .SubTitle {
+  width: 20rem;
+  margin-bottom: 0;
+  font-size: 1.6rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox .MultiBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 52rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox .MultiBox input[type="date"] {
+  width: 100%;
+  height: 4.8rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox .MultiBox > span {
+  padding: 0 4px;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox input[type="text"] {
+  width: calc(100% - 20rem);
+  height: 4.8rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox .DDoption {
+  width: calc(100% - 20rem);
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox .DDoption .Option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.6rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox .DDoption .Option input[type="text"] {
+  width: calc(100% - 6rem);
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox .DDoption .Option button {
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 0;
+  border-color: #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox .DDoption .Option button svg {
+  margin: 0;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .FormBox .DDoption .Option:last-of-type {
+  margin-bottom: 0;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .BtnWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .BtnWrap button {
+  width: auto;
+  height: 4rem;
+  border: 1px solid #2d2d2d;
+  border-radius: 0.4rem;
+  padding: 1rem 1.6rem;
+  margin-left: auto;
+  background-color: white;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .BtnWrap button svg {
+  margin-left: 0.8rem;
+  margin-top: -0.3rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .BtnWrap button.AddBoard {
+  border-color: #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .BtnWrap button.BlueBtn {
+  background-color: #0071eb;
+  color: white;
+  border: none;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.SurveyForm .BtnWrap button.AddForm {
+  border-color: #0071eb;
+  color: #0071eb;
+  margin-left: 1.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.MyPage table:first-of-type {
+  margin-bottom: 5.8rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.MyPage table:first-of-type input[type="button"].pwChangeBtn {
+  height: 4rem;
+  border: 1px solid #2d2d2d;
+  border-radius: 0.4rem;
+  padding: 1rem 1.6rem;
+  margin-left: auto;
+  background-color: white;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.MyPage button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.MyPage table tbody.MyAdditional tr td {
+  width: 20%;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.MyPage table tbody.MyAdditional tr td select {
+  width: 100%;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.MyPage .myPageEditButtonDiv {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.MyPage .myPageEditButtonDiv input[type="button"] {
+  height: 4rem;
+  border: 1px solid #2d2d2d;
+  border-radius: 0.4rem;
+  padding: 1rem 1.6rem;
+  margin-left: auto;
+  background-color: white;
+  margin-top: 4rem;
+  margin-right: 1rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.MyPage .myPageEditButtonDiv input[type="button"].submit {
+  background-color: #0071eb;
+  color: white;
+  border: none;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite {
+  width: 100%;
+  height: auto;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  padding-bottom: 0px;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .BoardTitle {
+  height: 5.2rem;
+  padding: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .BoardTitle input[type="checkbox"] {
+  display: none;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .BoardTitle input[type="checkbox"]:checked + label {
+  color: #0071eb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .BoardTitle input[type="checkbox"]:checked + label svg {
+  fill: #0071eb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .BoardTitle label {
+  font-size: 1.5rem;
+  color: #c2c8cc;
+  cursor: pointer;
+  padding-right: 1.6rem;
+  border-right: 1px solid #dbdbdb;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .BoardTitle label svg {
+  fill: #c2c8cc;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .BoardTitle label.Title {
+  width: 5.2rem;
+  border: none;
+  padding: 0px 0px 0px 1.6rem;
+  color: #919191;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .BoardTitle input[type="text"] {
+  width: calc(100% - 12rem - 5.2rem);
+  height: 4rem;
+  padding: 0 1.6rem;
+  border: none;
+  cursor: auto;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .BoardTitle input[type="text"]:focus {
+  outline-color: white;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .EditTool {
+  height: 5.2rem;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .WriteZone {
+  width: 100%;
+  height: 40rem;
+  padding: 2.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .WriteZone textarea {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+  border: none;
+  font-family: 'Montserrat','NanumSquareRound', sans-serif;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .WriteZone textarea:focus {
+  outline-color: white;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .ql-toolbar.ql-snow {
+  border: 0px;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .Content.BoardWrite .ql-toolbar.ql-snow span button {
+  width: 28px;
+  height: 24px;
+  padding: 3px 5px;
+  border: none;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul li {
+  width: calc(25% - 4rem);
+  height: auto;
+  margin: 2rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul li a {
+  position: relative;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul li a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: calc(100% - 8rem);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul li a .FilterBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 8rem;
+  bottom: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  color: white;
+  padding: 2rem;
+  border-top: 1px solid white;
+  z-index: 2;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul li a .FilterBox h4 {
+  width: 100%;
+  font-weight: 400;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul li a .FilterBox > p {
+  font-size: 1.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul li a .FilterBox > p span {
+  margin-left: 8px;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul li a .FilterBox > p:first-of-type {
+  width: 60%;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul li .ContValue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 6.8rem;
+  right: 0.8rem;
+  z-index: 3;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul li .ContValue p {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  height: 2.2rem;
+  background-color: white;
+  border-radius: 100px;
+  color: #2d2d2d;
+  margin-left: 12px;
+  font-size: 12px;
+  padding: 0.5rem 1.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .Content .CardWrap ul li .ContValue p svg {
+  margin-right: 4px;
+}
+
+.Wrap .ContWrap .ContBwrap .FileBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 1.6rem 2.4rem;
+  background-color: #f4f8fc;
+  border-radius: 4px;
+  margin-bottom: 4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .FileBox > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2.8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .FileBox .UploadName {
+  width: calc(100% - 2.8rem - 2.4rem - 10rem);
+  min-height: 8.2rem;
+  height: auto;
+  padding: 1.2rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px 0px 0px 4px;
+  cursor: default;
+}
+
+.Wrap .ContWrap .ContBwrap .FileBox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 10rem;
+  min-height: 8.2rem;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #dbdbdb;
+  border-radius: 0px 4px 4px 0px;
+  background-color: white;
+  border-left: 0px;
+  cursor: pointer;
+}
+
+.Wrap .ContWrap .ContBwrap .FileBox label > p {
+  font-size: 1.5rem;
+  margin-left: 0.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .FileBox input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+.Wrap .ContWrap .ContBwrap .MultiBtnWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.Wrap .ContWrap .ContBwrap .MultiBtnWrap button {
+  width: auto;
+  height: 4rem;
+  border: 1px solid #2d2d2d;
+  border-radius: 0.4rem;
+  padding: 1rem 1.6rem;
+  margin-left: auto;
+  background-color: white;
+  min-width: 8rem;
+  margin-left: 1.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .MultiBtnWrap button svg {
+  margin-left: 0.8rem;
+  margin-top: -0.3rem;
+}
+
+.Wrap .ContWrap .ContBwrap .MultiBtnWrap button.AddBoard {
+  border-color: #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .MultiBtnWrap button.BlueBtn {
+  background-color: #0071eb;
+  color: white;
+  border: none;
+}
+
+.Wrap .ContWrap .ContBwrap form {
+  margin-right: 3.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap form input[type="radio"] {
+  display: none;
+}
+
+.Wrap .ContWrap .ContBwrap form input[type="radio"]:checked + label {
+  background-color: #1992fd;
+  color: white;
+  border-radius: 100px;
+}
+
+.Wrap .ContWrap .ContBwrap form label {
+  display: inline-block;
+  width: auto;
+  line-height: 4rem;
+  padding: 0px 2rem;
+  color: #c2c8cc;
+  cursor: pointer;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.Wrap .ContWrap .ContBwrap .SearchBoxWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 10.4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3rem 3.2rem;
+  background-color: #f4f8fc;
+  border: 1px solid #e5f2ff;
+  border-radius: 0.8rem;
+  margin-bottom: 4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .SearchBoxWrap select {
+  min-width: 16rem;
+  margin-right: 0.8rem;
+  border-color: #e5f2ff;
+}
+
+.Wrap .ContWrap .ContBwrap .SearchBoxWrap select.OnlySelect {
+  width: 100%;
+  margin: 0;
+}
+
+.Wrap .ContWrap .ContBwrap .SearchBoxWrap .MultiInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 16.8rem);
+  height: 4.4rem;
+  border: 1px solid #e5f2ff;
+  border-radius: 0.4rem;
+  background-color: white;
+}
+
+.Wrap .ContWrap .ContBwrap .SearchBoxWrap .MultiInput input[type="text"] {
+  width: calc(100% - 6rem);
+  height: 4.2rem;
+  border: none;
+  padding-left: 1.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .SearchBoxWrap .MultiInput button {
+  width: 6rem;
+  height: 4.2rem;
+  border: none;
+}
+
+.Wrap .ContWrap .ContBwrap .SearchBoxWrap input[type="date"] {
+  width: 27.2rem;
+  height: 4.4rem;
+  border: 1px solid #e5f2ff;
+  border-radius: 4px;
+  padding: 1.2rem 1.6rem;
+  margin-right: auto;
+}
+
+.Wrap .ContWrap .ContBwrap .SearchBoxWrap button {
+  width: auto;
+  height: 4rem;
+  border: 1px solid #2d2d2d;
+  border-radius: 0.4rem;
+  padding: 1rem 1.6rem;
+  margin-left: auto;
+  background-color: white;
+}
+
+.Wrap .ContWrap .ContBwrap .SearchBoxWrap button svg {
+  margin-left: 0.8rem;
+  margin-top: -0.3rem;
+}
+
+.Wrap .ContWrap .ContBwrap .SearchBoxWrap button.AddBoard {
+  border-color: #dbdbdb;
+}
+
+.Wrap .ContWrap .ContBwrap .SearchBoxWrap button.BlueBtn {
+  background-color: #0071eb;
+  color: white;
+  border: none;
+}
+
+.Wrap .ContWrap .ContBwrap .DateValue {
+  margin-top: -1rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0071eb;
+  text-decoration: underline;
+  margin-bottom: 2.4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .DateGraphWrap {
+  width: 100%;
+  height: 449px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  margin-bottom: 3.6rem;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent {
+  padding: 8rem 0;
+  text-transform: capitalize;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 3.6rem;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent > p {
+  font-size: 1.8rem;
+  margin-bottom: 7.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .ElevateZoom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .ElevateZoom .loeoi {
+  padding-right: 4.4rem;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-align: justify;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .ElevateZoom .loeoi a {
+  display: inline-block;
+  font-weight: 600;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .ElevateZoom .MagnafigWrap {
+  position: relative;
+  margin-top: -64px;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .ElevateZoom .MagnafigWrap .wrap {
+  width: 52rem;
+  height: auto;
+  overflow: hidden;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent figure figcaption {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-align: justify;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent figure figcaption.loeoi {
+  padding-right: 2.9rem;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent figure figcaption.loeoi a {
+  display: inline-block;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent figure.Intro {
+  display: block;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent figure.Intro figcaption {
+  margin-bottom: 2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent figure .MagnafigWrap {
+  position: relative;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent figure .MagnafigWrap .wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent figure .MagnafigWrap .wrap .target {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent figure .MagnafigWrap .wrap .target .photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: -webkit-transform .5s ease-out;
+  transition: -webkit-transform .5s ease-out;
+  transition: transform .5s ease-out;
+  transition: transform .5s ease-out, -webkit-transform .5s ease-out;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .apaWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2.2rem;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .apaWrap .apa {
+  width: 25%;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .apaWrap .apa li {
+  color: #919191;
+  line-height: 2;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .apaWrap .apa > li:first-of-type {
+  height: 4.2rem;
+  margin: 2.8rem 0px;
+  font-size: 1.8rem;
+  color: #2d2d2d;
+  line-height: 1;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .apaWrap .apa::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .apaWrap .ac::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cg %3E%3Cg  fill='%23fff'%3E%3Cpath data-name='패스 952' d='M28.711 24.856h-18.18a.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75h18.18a.75.75 0 0 1 .745.75.75.75 0 0 1-.745.75Z'/%3E%3Cpath data-name='패스 949' d='M25.238 21.148H8.486a.75.75 0 0 1 0-1.5h16.752a5.767 5.767 0 0 0 5.76-5.76v-.127A5.767 5.767 0 0 0 25.238 8a.75.75 0 0 1 0-1.5 7.269 7.269 0 0 1 7.26 7.261v.127a7.269 7.269 0 0 1-7.26 7.26Z'/%3E%3Cpath data-name='패스 950' d='M25.284 32.553h-1.706a.75.75 0 0 1 0-1.5h1.706a1.245 1.245 0 1 0 0-2.49H8.06a.75.75 0 1 1 0-1.5h17.224a2.745 2.745 0 1 1 0 5.49Z'/%3E%3Cpath data-name='패스 951' d='M25.123 17.441H10.791a.75.75 0 0 1 0-1.5h14.336a1.407 1.407 0 1 0 0-2.813H23.79a.75.75 0 0 1 0-1.5h1.337a2.906 2.906 0 1 1 0 5.813Z'/%3E%3C/g%3E%3Cpath data-name='사각형 1022' fill='none' d='M0 0h40v40H0z'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(126deg, #5baaff 0%, #0059b8 100%);
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .apaWrap .srre::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Crect data-name='사각형 234' width='27.826' height='31.188' fill='%23fff'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg data-name='그룹 1857' transform='translate(-658 -832)'%3E%3Cg data-name='그룹 370' transform='translate(664 836)' fill='%23fff'%3E%3Crect data-name='사각형 225' width='1.459' height='8.733' transform='rotate(-60.001 11.529 -11.112)'/%3E%3Crect data-name='사각형 226' width='1.459' height='8.732' transform='translate(24.356 11.289)'/%3E%3Crect data-name='사각형 227' width='8.61' height='1.459' transform='rotate(-30.001 57.629 -15.333)'/%3E%3Crect data-name='사각형 228' width='1.459' height='8.854' transform='rotate(-60 22.526 8.179)'/%3E%3Crect data-name='사각형 229' width='1.459' height='8.735' transform='translate(2.151 11.168)'/%3E%3Crect data-name='사각형 230' width='1.459' height='8.795' transform='rotate(-59.813 11.492 1.694)'/%3E%3Crect data-name='사각형 231' width='8.673' height='1.459' transform='rotate(-29.77 33.895 -21.97)'/%3E%3Crect data-name='사각형 232' width='1.459' height='8.732' transform='translate(13.254 17.639)'/%3E%3Crect data-name='사각형 233' width='8.737' height='1.459' transform='rotate(-30 16.197 -4.227)'/%3E%3Cg data-name='그룹 368' clip-path='url(%23a)'%3E%3Cpath data-name='패스 912' d='M13.983 5.547a2.774 2.774 0 1 1 2.774-2.773 2.776 2.776 0 0 1-2.773 2.773m0-4.088a1.314 1.314 0 1 0 1.313 1.315 1.315 1.315 0 0 0-1.314-1.315'/%3E%3Cpath data-name='패스 913' d='M13.983 18.368a2.774 2.774 0 1 1 2.773-2.773 2.776 2.776 0 0 1-2.773 2.773m0-4.088a1.314 1.314 0 1 0 1.314 1.315 1.315 1.315 0 0 0-1.314-1.315'/%3E%3Cpath data-name='패스 914' d='M2.841 11.898a2.782 2.782 0 1 1 .722-.1 2.753 2.753 0 0 1-.722.1m.009-4.089a1.314 1.314 0 0 0-.659 2.452 1.314 1.314 0 0 0 1.8-.481A1.314 1.314 0 0 0 2.85 7.809'/%3E%3Cpath data-name='패스 915' d='M2.779 24.718a2.785 2.785 0 0 1-.723-.1 2.76 2.76 0 1 1 .723.1m-.006-4.086a1.316 1.316 0 0 0-1.137 1.972 1.315 1.315 0 1 0 2.277-1.315 1.32 1.32 0 0 0-1.14-.657'/%3E%3Cpath data-name='패스 916' d='M13.983 31.187a2.774 2.774 0 1 1 2.774-2.77 2.776 2.776 0 0 1-2.773 2.774m0-4.088a1.314 1.314 0 1 0 1.313 1.314 1.315 1.315 0 0 0-1.314-1.314'/%3E%3Cpath data-name='패스 917' d='M24.976 24.841a2.782 2.782 0 1 1 .722-.1 2.754 2.754 0 0 1-.722.1m.006-4.089a1.314 1.314 0 1 0 .655.176 1.315 1.315 0 0 0-.655-.176'/%3E%3Cpath data-name='패스 918' d='M25.055 12.02a2.778 2.778 0 1 1 1.382-.373 2.777 2.777 0 0 1-1.382.373m-.007-4.089a1.314 1.314 0 1 0 1.141.657 1.307 1.307 0 0 0-1.141-.657'/%3E%3C/g%3E%3C/g%3E%3Crect data-name='사각형 1023' width='40' height='40' transform='translate(658 832)' fill='none'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(126deg, #ff98bc 0%, #ee2f62 100%);
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .apaWrap .tgfaeb::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg data-name='그룹 1858' transform='translate(-960 -832)'%3E%3Cg data-name='그룹 587' transform='translate(641 -472)'%3E%3Cpath data-name='합치기 12' d='m346.027 1335.388-3.308-8.146h-6.368l-3.309 8.146a.994.994 0 0 1-1.284.542.968.968 0 0 1-.551-1.265l5.466-13.46a3.851 3.851 0 0 1-1.125-2.72 3.952 3.952 0 0 1 7.9 0 3.848 3.848 0 0 1-1.077 2.671l5.486 13.509a.969.969 0 0 1-.55 1.265.994.994 0 0 1-1.284-.542Zm-4.099-10.088-1.256-3.1a4.032 4.032 0 0 1-2.283.018l-1.248 3.082Zm9.558-.9a.769.769 0 0 1-.681-1.139 10.751 10.751 0 0 0-.014-10.13.766.766 0 0 1 .686-1.131h.532a.792.792 0 0 1 .721.45 13.628 13.628 0 0 1 0 11.495.792.792 0 0 1-.721.45Zm-24.464 0a.79.79 0 0 1-.715-.443A13.368 13.368 0 0 1 325 1318.2a13.69 13.69 0 0 1 1.268-5.749.792.792 0 0 1 .722-.451h.595a.767.767 0 0 1 .683 1.13 10.692 10.692 0 0 0 .009 10.133.767.767 0 0 1-.683 1.131Zm19.139-3.1a.763.763 0 0 1-.727-1.025 6.011 6.011 0 0 0 0-4.147.763.763 0 0 1 .727-1.028h.59a.779.779 0 0 1 .754.545 9.035 9.035 0 0 1 0 5.108.781.781 0 0 1-.755.545Zm-13.986 0a.779.779 0 0 1-.754-.545 9.038 9.038 0 0 1 0-5.109.781.781 0 0 1 .754-.546h.733a.764.764 0 0 1 .728 1.025 6 6 0 0 0 0 4.147.764.764 0 0 1-.729 1.028Z' fill='%23fff'/%3E%3Crect data-name='사각형 381' width='32' height='32' transform='translate(323 1308)' fill='none'/%3E%3C/g%3E%3Crect data-name='사각형 1024' width='40' height='40' transform='translate(960 832)' fill='none'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(126deg, #f1eca2 0%, #e48900 100%);
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .apaWrap .cc::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg data-name='그룹 1859' transform='translate(-1260 -832)'%3E%3Cg data-name='그룹 589' transform='translate(22 -471)'%3E%3Cpath data-name='Icon weather-night-showers' d='M1244 1322.855a6.164 6.164 0 0 0 .494 2.471 6.394 6.394 0 0 0 1.328 2.038 6.563 6.563 0 0 0 1.991 1.393 6.5 6.5 0 0 0 2.446.592.2.2 0 0 0 .234-.223v-1.762a.2.2 0 0 0-.234-.223 4.025 4.025 0 0 1-2.836-1.354 4.329 4.329 0 0 1-.078-5.837 3.98 3.98 0 0 1 2.732-1.354l.69-.092a.173.173 0 0 0 .2-.2l.1-.7a5.586 5.586 0 0 1 5.569-5.022 5.568 5.568 0 0 1 5.53 4.969l.091.749a.218.218 0 0 0 .234.25h2.109a4.04 4.04 0 0 1 2.98 1.262 4.161 4.161 0 0 1 1.249 3.037 4.245 4.245 0 0 1-1.158 2.945 4.023 4.023 0 0 1-2.823 1.354c-.169 0-.247.079-.247.223v1.761c0 .145.078.223.247.223a6.3 6.3 0 0 0 4.411-2 6.225 6.225 0 0 0 1.809-4.5 7.3 7.3 0 0 0-.538-2.611 6.977 6.977 0 0 0 1.47-4.325 6.944 6.944 0 0 0-3.422-5.981 6.785 6.785 0 0 0-8.431 1.262 7.78 7.78 0 0 0-3.513-.856 7.545 7.545 0 0 0-4.905 1.735 7.771 7.771 0 0 0-2.729 4.44 6.3 6.3 0 0 0-3.591 2.261 6.369 6.369 0 0 0-1.409 4.075Zm7.013 8.873a1.126 1.126 0 0 0 .2.631 1.143 1.143 0 0 0 .625.447.858.858 0 0 0 .481.092.9.9 0 0 0 .52-.263 1.265 1.265 0 0 0 .364-.631l.364-1.328a1.128 1.128 0 0 0-.1-.881.992.992 0 0 0-.69-.486.96.96 0 0 0-.82.092 1.107 1.107 0 0 0-.533.657l-.364 1.367a1.48 1.48 0 0 0-.047.304Zm1.7-6.27a1.255 1.255 0 0 0 .221.684.9.9 0 0 0 .625.368c.234.039.351.066.39.066.494 0 .82-.289.989-.868l.364-1.315a1.161 1.161 0 0 0-.794-1.42 1.031 1.031 0 0 0-.833.105 1.149 1.149 0 0 0-.52.684l-.39 1.38c-.022.158-.048.264-.048.316Zm1.618 10.386a1.21 1.21 0 0 0 .2.657 1.013 1.013 0 0 0 .625.434 2.383 2.383 0 0 0 .364.066 1.369 1.369 0 0 0 .494-.131 1.074 1.074 0 0 0 .486-.726l.39-1.328a1.229 1.229 0 0 0-.1-.894.958.958 0 0 0-.677-.486.984.984 0 0 0-.833.092 1.154 1.154 0 0 0-.546.67l-.364 1.367a1.17 1.17 0 0 0-.039.279Zm1.73-6.31a1.114 1.114 0 0 0 .208.644 1.081 1.081 0 0 0 .638.434 1.04 1.04 0 0 0 .82-.066 1.113 1.113 0 0 0 .533-.736l.364-1.328a1.081 1.081 0 0 0-.091-.881 1.016 1.016 0 0 0-.69-.473.98.98 0 0 0-.833.079 1.1 1.1 0 0 0-.533.67l-.364 1.367a2 2 0 0 0-.052.289Zm3.708 2.3a.9.9 0 0 0 .182.6 1.211 1.211 0 0 0 .6.434l.325.039a1.2 1.2 0 0 0 .494-.092.93.93 0 0 0 .546-.71l.364-1.38a1 1 0 0 0-.091-.841 1.12 1.12 0 0 0-1.535-.421.95.95 0 0 0-.468.7l-.377 1.315q-.039.336-.039.356Zm1.757-6.31a1.154 1.154 0 0 0 .208.657.934.934 0 0 0 .625.394l.325.039a1 1 0 0 0 1.054-.815l.362-1.355a1.229 1.229 0 0 0-.1-.894.992.992 0 0 0-.69-.486.968.968 0 0 0-.833.092 1.076 1.076 0 0 0-.507.7l-.39 1.341a3.117 3.117 0 0 0-.054.327Zm.442-13.014a4.416 4.416 0 0 1 3.188-1.275 4.323 4.323 0 0 1 3.24 1.38 4.7 4.7 0 0 1 .716 5.626 6.145 6.145 0 0 0-4.541-1.897h-.416a7.5 7.5 0 0 0-2.187-3.834Z' fill='%23fff'/%3E%3Crect data-name='사각형 381' width='32' height='32' transform='translate(1242 1307)' fill='none'/%3E%3C/g%3E%3Crect data-name='사각형 1025' width='40' height='40' transform='translate(1260 832)' fill='none'/%3E%3C/g%3E%3C/svg%3E"), linear-gradient(126deg, #26e8ba 0%, #27b5ce 100%);
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .tlai {
+  margin-top: 4rem;
+}
+
+.Wrap .ContWrap .ContBwrap .AboutContent .KariNgos {
+  text-align: center;
+}
+
+.Wrap .ContWrap .ContBwrap.AboutB {
+  padding: 0;
+}
+
+.Wrap .TabContainer {
+  width: 100%;
+}
+
+.Wrap .TabContainer .Tabs {
+  width: 132rem;
+  margin: 0 auto;
+}
+
+.Wrap .TabContainer .Tabs li {
+  min-width: 17.2rem;
+  width: auto;
+  background: #f4f8fc;
+  display: inline-block;
+  position: relative;
+  padding: 2rem 0px 2rem 2rem;
+  border-radius: 8px 0px 0px 0px;
+  margin-left: 2.4rem;
+  color: #c2c8cc;
+  z-index: 2;
+  cursor: pointer;
+  text-align: center;
+}
+
+.Wrap .TabContainer .Tabs li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 4.4rem;
+  background-color: #f4f8fc;
+  right: -24px;
+  -webkit-transform: skew(25deg, 0deg);
+          transform: skew(25deg, 0deg);
+  border-radius: 0px 8px 0px 0px;
+  z-index: -1;
+}
+
+.Wrap .TabContainer .Tabs li.active {
+  background-color: white;
+  color: #0071eb;
+  z-index: 3;
+  -webkit-box-shadow: 0px -1px 0.5rem rgba(0, 0, 0, 0.03);
+          box-shadow: 0px -1px 0.5rem rgba(0, 0, 0, 0.03);
+}
+
+.Wrap .TabContainer .Tabs li.active::before {
+  background-color: white;
+  -webkit-box-shadow: 2px -1px 0.5rem rgba(0, 0, 0, 0.03);
+          box-shadow: 2px -1px 0.5rem rgba(0, 0, 0, 0.03);
+}
+
+.Wrap .TabContainer .Tabs li.disabled {
+  cursor: default;
+}
+
+.Wrap .TabContainer .Tabs li:first-of-type {
+  margin-left: 0px;
+}
+
+.Wrap .TabContainer .ContWrap {
+  border-radius: 0px 1.2rem 1.2rem;
+}
+
+.Wrap .TabContainer .ContWrap .TabContent {
+  display: none;
+}
+
+.Wrap .TabContainer .ContWrap .TabContent .ProductWrap {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 7.2rem;
+}
+
+.Wrap .TabContainer .ContWrap .TabContent .ProductWrap .Description {
+  display: block;
+  line-height: 20px;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+}
+
+.Wrap .TabContainer .ContWrap .TabContent .ProductWrap .ProductL {
+  width: calc(100% - 400px);
+  float: left;
+}
+
+.Wrap .TabContainer .ContWrap .TabContent .ProductWrap .ProductR {
+  width: 330px;
+  margin-left: 70px;
+  float: right;
+  top: 30%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.Wrap .TabContainer .ContWrap .TabContent.active {
+  display: inherit;
+}
+
+.Wrap .TabContainer .ContWrap .TabContent.Equipment {
+  padding-top: 8rem;
+}
+
+.Wrap .TabContainer .ContWrap .TabContent.Equipment .SubTitle {
+  font-size: 2.2rem;
+}
+
+.ScrollDisabled {
+  overflow: hidden !important;
+  -ms-touch-action: none;
+      touch-action: none;
+}
+
+.PopBg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  top: 0;
+  left: 0;
+}
+
+.PopBg .PopCont {
+  width: 60rem;
+  height: auto;
+  max-height: calc(100vh - 10rem);
+  margin: auto;
+}
+
+.PopBg .PopCont .PopHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2.4rem 3.2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #dbdbdb;
+  border-radius: 8px 8px 0px 0px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.PopBg .PopCont .PopHeader > p {
+  line-height: 24px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.PopBg .PopCont .PopHeader > p svg {
+  margin-right: 8px;
+}
+
+.PopBg .PopCont .PopBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  max-height: calc(100vh - 10rem - 7.4rem);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2.8rem 3.2rem 4rem;
+  border-radius: 0px 0px 8px 8px;
+  background-color: white;
+  overflow: auto;
+}
+
+.PopBg .PopCont .PopBody .SubTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.PopBg .PopCont .PopBody table, .PopBg .PopCont .PopBody .DateGraphWrap, .PopBg .PopCont .PopBody .MapWrap {
+  margin-bottom: 5.2rem;
+}
+
+.PopBg .PopCont .PopBody .MapWrap .main-img {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.PopBg .PopCont .PopBody .MapWrap .imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.PopBg .PopCont .PopBody .MapWrap .imgs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.PopBg .PopCont .PopBody .MapWrap .imgs ul li {
+  width: 24%;
+}
+
+.PopBg .PopCont .PopBody .MapWrap .imgs ul li img {
+  opacity: 0.4;
+}
+
+.PopBg .PopCont .PopBody .MapWrap .imgs ul li p {
+  line-height: 24px;
+  text-align: center;
+}
+
+.PopBg .PopCont .PopBody .DateGraphWrap {
+  width: 100%;
+  height: 36rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  margin-bottom: 3.6rem;
+}
+
+.PopBg .PopCont .PopBody form {
+  padding-bottom: 3.6rem;
+}
+
+.PopBg .PopCont .PopBody form label {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  color: #707070;
+}
+
+.PopBg .PopCont .PopBody form input, .PopBg .PopCont .PopBody form select {
+  width: 100%;
+  margin-bottom: 2.4rem;
+}
+
+.PopBg .PopCont .PopBody form input {
+  font-size: 1.6rem;
+}
+
+.PopBg .PopCont .PopBody form input:-moz-read-only {
+  border: none;
+  height: 2rem;
+  padding: 0;
+}
+
+.PopBg .PopCont .PopBody form input:read-only {
+  border: none;
+  height: 2rem;
+  padding: 0;
+}
+
+.PopBg .PopCont .PopBody form#pwChange input[type="password"] {
+  border: 1px solid #dbdbdb;
+  background-color: white;
+  border-radius: 0.4rem;
+  height: 4rem;
+  padding: 0 1.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.PopBg .PopCont .PopBody button {
+  width: auto;
+  height: 4rem;
+  border: 1px solid #2d2d2d;
+  border-radius: 0.4rem;
+  padding: 1rem 1.6rem;
+  margin-left: auto;
+  background-color: white;
+  width: 100%;
+  height: 5.2rem;
+  font-size: 1.6rem;
+}
+
+.PopBg .PopCont .PopBody button svg {
+  margin-left: 0.8rem;
+  margin-top: -0.3rem;
+}
+
+.PopBg .PopCont .PopBody button.AddBoard {
+  border-color: #dbdbdb;
+}
+
+.PopBg .PopCont .PopBody button.BlueBtn {
+  background-color: #0071eb;
+  color: white;
+  border: none;
+}
+
+.PopBg .PopCont .PopBody .Spot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.PopBg .PopCont .PopBody .Spot p {
+  font-size: 18px;
+}
+
+.PopBg .PopCont .PopBody .Spot .Clock {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.PopBg .PopCont .PopBody .Spot .Clock #SatelliteTime {
+  margin-left: 8px;
+}
+
+.PopBg .PopCont.L {
+  width: 101.4rem;
+}
+
+.PopBg .PopCont.M {
+  width: 60rem;
+}
+
+.PopBg .PopCont.XS {
+  width: 56rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.PopBg .PopCont.XS .PopBody {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 17.2rem;
+}
+
+.PopBg .PopCont.XS .PopBody .BtnWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 7.2rem;
+}
+
+.PopBg .PopCont.XS .PopBody .BtnWrap button {
+  width: 47%;
+}
+
+.PopBg .PopCont.XS .PopBody.alert {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='99' height='72'%3E%3Cpath d='M0 61.172V8a8 8 0 0 1 8-8h83a8 8 0 0 1 8 8v45.172a8 8 0 0 1-8 8H11.17L0 72Z' fill='%23e5f2ff'/%3E%3Cg transform='translate(26.999 27.571)' fill='%23fff'%3E%3Ccircle cx='4' cy='4' r='4'/%3E%3Ccircle cx='4' cy='4' r='4' transform='translate(18)'/%3E%3Ccircle cx='4' cy='4' r='4' transform='translate(36)'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 5.2rem;
+}
+
+.PopBg .PopCont.XS .PopBody.alert > p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.PopBg.PopHide {
+  display: none;
+}
+
+.MonitoringTable .LegendWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.MonitoringTable .LegendWrap p {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+
+.MonitoringTable .LegendWrap p span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.MonitoringTable .LegendWrap p:first-of-type span {
+  background: #1AC55E;
+}
+
+.MonitoringTable .LegendWrap p:nth-of-type(2) span {
+  background: #FFD500;
+}
+
+.MonitoringTable .LegendWrap p:nth-of-type(3) span {
+  background: #db1515;
+}
+
+.MonitoringTable table {
+  table-layout: fixed;
+}
+
+.MonitoringTable table thead th {
+  padding: 0 8px;
+}
+
+.MonitoringTable table thead th:first-of-type {
+  width: 140px;
+}
+
+.MonitoringTable table thead th:nth-of-type(2) {
+  width: 99px;
+}
+
+.MonitoringTable table tbody th, .MonitoringTable table tbody td {
+  padding: 0 8px;
+  vertical-align: middle;
+}
+
+.MonitoringTable table tbody th {
+  border-right: 1px solid #dbdbdb;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.MonitoringTable table tbody th:first-of-type {
+  width: 140px;
+}
+
+.MonitoringTable table tbody th:nth-of-type(2) {
+  width: 99px;
+}
+
+.MonitoringTable table tbody td {
+  width: 31px;
+  padding: 0px;
+}
+
+footer {
+  min-width: 132rem;
+  width: 100%;
+  height: 180px;
+  background: #3d4856;
+}
+
+footer .FootWrap {
+  width: 132rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+footer .FootWrap .FootLogo img {
+  -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(108%) contrast(103%);
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(108%) contrast(103%);
+  margin-top: -2.4rem;
+}
+
+footer .FootWrap .AddWrap {
+  width: calc(100% - 300px - 250px);
+  color: #dbdbdb;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+footer .FootWrap .FamilySite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .FootWrap .FamilySite select {
+  width: 200px;
+  background-color: transparent;
+  color: white;
+  border-radius: 0px;
+  border: 1px solid #A7ADBB;
+  padding: 0px 28px 0px 8px;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+footer .FootWrap .FamilySite select option {
+  color: #2d2d2d;
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+footer .FootWrap .FamilySite button {
+  width: auto;
+  height: 44px;
+  padding: 12px 20px;
+  background-color: white;
+  margin-left: 12px;
+}
+
+.blobsWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  z-index: 9999;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.blobsWrap .blobs {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 70px;
+}
+
+.blobsWrap .blobs .blob-center {
+  position: absolute;
+  background: white;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scale(0.9) translate(-50%, -50%);
+          transform: scale(0.9) translate(-50%, -50%);
+  -webkit-animation: blob-grow linear 3.4s infinite;
+          animation: blob-grow linear 3.4s infinite;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0px 40px -5px white;
+          box-shadow: 0 0px 40px -5px white;
+}
+
+.blobsWrap .blob {
+  position: absolute;
+  background: white;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-animation: blobs ease-out 3.4s infinite;
+          animation: blobs ease-out 3.4s infinite;
+  -webkit-transform: scale(0.9) translate(-50%, -50%);
+          transform: scale(0.9) translate(-50%, -50%);
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  opacity: 0;
+}
+
+.blobsWrap .blob:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.blobsWrap .blob:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.blobsWrap .blob:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.blobsWrap .blob:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.blobsWrap .blob:nth-child(5) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes blobs {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translate(calc(-330px - 50%), -50%);
+            transform: scale(0) translate(calc(-330px - 50%), -50%);
+  }
+  1% {
+    opacity: 1;
+  }
+  35%, 65% {
+    opacity: 1;
+    -webkit-transform: scale(0.9) translate(-50%, -50%);
+            transform: scale(0.9) translate(-50%, -50%);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0) translate(calc(330px - 50%), -50%);
+            transform: scale(0) translate(calc(330px - 50%), -50%);
+  }
+}
+
+@keyframes blobs {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translate(calc(-330px - 50%), -50%);
+            transform: scale(0) translate(calc(-330px - 50%), -50%);
+  }
+  1% {
+    opacity: 1;
+  }
+  35%, 65% {
+    opacity: 1;
+    -webkit-transform: scale(0.9) translate(-50%, -50%);
+            transform: scale(0.9) translate(-50%, -50%);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0) translate(calc(330px - 50%), -50%);
+            transform: scale(0) translate(calc(330px - 50%), -50%);
+  }
+}
+
+@-webkit-keyframes blob-grow {
+  0%, 39% {
+    -webkit-transform: scale(0) translate(-50%, -50%);
+            transform: scale(0) translate(-50%, -50%);
+  }
+  40%, 42% {
+    -webkit-transform: scale(1, 0.9) translate(-50%, -50%);
+            transform: scale(1, 0.9) translate(-50%, -50%);
+  }
+  43%, 44% {
+    -webkit-transform: scale(1.2, 1.1) translate(-50%, -50%);
+            transform: scale(1.2, 1.1) translate(-50%, -50%);
+  }
+  45%, 46% {
+    -webkit-transform: scale(1.3, 1.2) translate(-50%, -50%);
+            transform: scale(1.3, 1.2) translate(-50%, -50%);
+  }
+  47%, 48% {
+    -webkit-transform: scale(1.4, 1.3) translate(-50%, -50%);
+            transform: scale(1.4, 1.3) translate(-50%, -50%);
+  }
+  52% {
+    -webkit-transform: scale(1.5, 1.4) translate(-50%, -50%);
+            transform: scale(1.5, 1.4) translate(-50%, -50%);
+  }
+  54% {
+    -webkit-transform: scale(1.7, 1.6) translate(-50%, -50%);
+            transform: scale(1.7, 1.6) translate(-50%, -50%);
+  }
+  58% {
+    -webkit-transform: scale(1.8, 1.7) translate(-50%, -50%);
+            transform: scale(1.8, 1.7) translate(-50%, -50%);
+  }
+  68%, 70% {
+    -webkit-transform: scale(1.7, 1.5) translate(-50%, -50%);
+            transform: scale(1.7, 1.5) translate(-50%, -50%);
+  }
+  78% {
+    -webkit-transform: scale(1.6, 1.4) translate(-50%, -50%);
+            transform: scale(1.6, 1.4) translate(-50%, -50%);
+  }
+  80%, 81% {
+    -webkit-transform: scale(1.5, 1.4) translate(-50%, -50%);
+            transform: scale(1.5, 1.4) translate(-50%, -50%);
+  }
+  82%, 83% {
+    -webkit-transform: scale(1.4, 1.3) translate(-50%, -50%);
+            transform: scale(1.4, 1.3) translate(-50%, -50%);
+  }
+  84%, 85% {
+    -webkit-transform: scale(1.3, 1.2) translate(-50%, -50%);
+            transform: scale(1.3, 1.2) translate(-50%, -50%);
+  }
+  86%, 87% {
+    -webkit-transform: scale(1.2, 1.1) translate(-50%, -50%);
+            transform: scale(1.2, 1.1) translate(-50%, -50%);
+  }
+  90%, 91% {
+    -webkit-transform: scale(1, 0.9) translate(-50%, -50%);
+            transform: scale(1, 0.9) translate(-50%, -50%);
+  }
+  92%, 100% {
+    -webkit-transform: scale(0) translate(-50%, -50%);
+            transform: scale(0) translate(-50%, -50%);
+  }
+}
+
+@keyframes blob-grow {
+  0%, 39% {
+    -webkit-transform: scale(0) translate(-50%, -50%);
+            transform: scale(0) translate(-50%, -50%);
+  }
+  40%, 42% {
+    -webkit-transform: scale(1, 0.9) translate(-50%, -50%);
+            transform: scale(1, 0.9) translate(-50%, -50%);
+  }
+  43%, 44% {
+    -webkit-transform: scale(1.2, 1.1) translate(-50%, -50%);
+            transform: scale(1.2, 1.1) translate(-50%, -50%);
+  }
+  45%, 46% {
+    -webkit-transform: scale(1.3, 1.2) translate(-50%, -50%);
+            transform: scale(1.3, 1.2) translate(-50%, -50%);
+  }
+  47%, 48% {
+    -webkit-transform: scale(1.4, 1.3) translate(-50%, -50%);
+            transform: scale(1.4, 1.3) translate(-50%, -50%);
+  }
+  52% {
+    -webkit-transform: scale(1.5, 1.4) translate(-50%, -50%);
+            transform: scale(1.5, 1.4) translate(-50%, -50%);
+  }
+  54% {
+    -webkit-transform: scale(1.7, 1.6) translate(-50%, -50%);
+            transform: scale(1.7, 1.6) translate(-50%, -50%);
+  }
+  58% {
+    -webkit-transform: scale(1.8, 1.7) translate(-50%, -50%);
+            transform: scale(1.8, 1.7) translate(-50%, -50%);
+  }
+  68%, 70% {
+    -webkit-transform: scale(1.7, 1.5) translate(-50%, -50%);
+            transform: scale(1.7, 1.5) translate(-50%, -50%);
+  }
+  78% {
+    -webkit-transform: scale(1.6, 1.4) translate(-50%, -50%);
+            transform: scale(1.6, 1.4) translate(-50%, -50%);
+  }
+  80%, 81% {
+    -webkit-transform: scale(1.5, 1.4) translate(-50%, -50%);
+            transform: scale(1.5, 1.4) translate(-50%, -50%);
+  }
+  82%, 83% {
+    -webkit-transform: scale(1.4, 1.3) translate(-50%, -50%);
+            transform: scale(1.4, 1.3) translate(-50%, -50%);
+  }
+  84%, 85% {
+    -webkit-transform: scale(1.3, 1.2) translate(-50%, -50%);
+            transform: scale(1.3, 1.2) translate(-50%, -50%);
+  }
+  86%, 87% {
+    -webkit-transform: scale(1.2, 1.1) translate(-50%, -50%);
+            transform: scale(1.2, 1.1) translate(-50%, -50%);
+  }
+  90%, 91% {
+    -webkit-transform: scale(1, 0.9) translate(-50%, -50%);
+            transform: scale(1, 0.9) translate(-50%, -50%);
+  }
+  92%, 100% {
+    -webkit-transform: scale(0) translate(-50%, -50%);
+            transform: scale(0) translate(-50%, -50%);
+  }
+}
+
+@media all and (min-device-width: 1921px) and (min-device-height: 976px) {
+  .MainWrap {
+    min-height: calc(100vh - 120px - 360px - 180px);
+  }
+}
+
+.ui-datepicker {
+  width: 28rem !important;
+  font-family: 'Montserrat','NanumSquareRound', sans-serif !important;
+  border: 1px solid #e5f2ff !important;
+  -webkit-box-shadow: 0px 0px 24px rgba(0, 105, 255, 0.12);
+          box-shadow: 0px 0px 24px rgba(0, 105, 255, 0.12);
+  border-radius: 5px !important;
+  padding: 0 .8rem !important;
+}
+
+.ui-datepicker .ui-datepicker-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  border: none;
+  padding: 1.6rem 0 !important;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-state-hover {
+  border: none;
+  background: transparent;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 60px);
+  margin: 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+  width: 48%;
+  height: 4rem;
+  font-size: 1.4rem;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next, .ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  position: relative;
+  width: 3rem;
+  height: 4rem;
+  top: 0;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  left: 0;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev .ui-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' width='8' height='15'%3E%3Cpath d='m2.411 7.499 5.295-5.671a1.122 1.122 0 0 0 0-1.514.957.957 0 0 0-1.416 0l-6 6.426a1.126 1.126 0 0 0-.029 1.478l6.024 6.47a.959.959 0 0 0 1.416 0 1.122 1.122 0 0 0 0-1.514Z'/%3E%3C/svg%3E");
+  background-position: center;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  right: 0;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next .ui-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' width='8' height='15'%3E%3Cpath d='M5.589 7.501.294 13.172a1.122 1.122 0 0 0 0 1.514.957.957 0 0 0 1.416 0l6-6.426a1.126 1.126 0 0 0 .029-1.478L1.715.312a.959.959 0 0 0-1.416 0 1.122 1.122 0 0 0 0 1.514Z'/%3E%3C/svg%3E");
+  background-position: center;
+}
+
+.ui-datepicker table thead {
+  height: 4rem;
+}
+
+.ui-datepicker table thead tr {
+  background-color: white;
+}
+
+.ui-datepicker table thead tr th {
+  padding: 1.2rem;
+  font-weight: 400;
+}
+
+.ui-datepicker table thead tr th span {
+  color: #919191;
+}
+
+.ui-datepicker table tbody tr {
+  height: 4rem;
+  border-bottom: none;
+}
+
+.ui-datepicker table tbody tr td {
+  padding: 0.1rem 0;
+}
+
+.ui-datepicker table tbody tr td a, .ui-datepicker table tbody tr td span {
+  width: 100%;
+  height: 3.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.ui-datepicker table.ui-datepicker-calendar {
+  table-layout: fixed;
+  font-size: 1.4rem;
+}
+
+.ui-datepicker table.ui-datepicker-calendar tbody tr td a, .ui-datepicker table.ui-datepicker-calendar tbody tr td span {
+  width: 100%;
+  height: 3.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 4px;
+}
+
+.ui-datepicker table.ui-datepicker-calendar tbody tr td a.ui-state-default, .ui-datepicker table.ui-datepicker-calendar tbody tr td span.ui-state-default {
+  border: none;
+  background: transparent;
+}
+
+.ui-datepicker table.ui-datepicker-calendar tbody tr td a.ui-state-hover, .ui-datepicker table.ui-datepicker-calendar tbody tr td span.ui-state-hover {
+  border: 1px solid #1992fd;
+  color: #1992fd;
+}
+
+.ui-datepicker table.ui-datepicker-calendar tbody tr td a.ui-state-active, .ui-datepicker table.ui-datepicker-calendar tbody tr td span.ui-state-active {
+  border: 1px solid #0071eb;
+  background-color: #0071eb;
+  color: white;
+}
+
+.ui-datepicker table.ui-datepicker-calendar tbody tr td a.ui-state-highlight, .ui-datepicker table.ui-datepicker-calendar tbody tr td span.ui-state-highlight {
+  color: #2d2d2d;
+  border: 1px solid #dbdbdb;
+  background-color: white;
+}
+
+.ui-datepicker.ui-widget-content .ui-widget-header .ui-state-default {
+  width: 100%;
+  height: 3.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+}
